@@ -1,0 +1,14 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 30px;
+}
+
+.banner {
+    width: 100%; 
+    max-width: 1800px; 
+    height: auto; 
+    object-fit: cover; 
+    margin-left: 120px;
+}

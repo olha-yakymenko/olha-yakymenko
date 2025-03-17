@@ -1,0 +1,31 @@
+[
+  {
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "email": "jan.kowalski@example.com",
+    "password": "$2b$10$B4nloElIQNksivE1bjwN2.9/3vaNKBux85TMv2Cxzf1b4vIqTEVO6",
+    "isAuthenticated": true,
+    "cart": [],
+    "role": "user",
+    "sale": []
+  },
+  {
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "email": "admin@gmail.com",
+    "password": "123",
+    "isAuthenticated": true,
+    "cart": [],
+    "role": "admin"
+  },
+  {
+    "firstName": "Olha",
+    "lastName": "Yakymenko",
+    "email": "o.yakymenko.450@studms.ug.edu.pl",
+    "password": "$2b$10$L7m9uOKHq2hZHTsJisCVb.JTtWMq6e/gEM8VF4wizwfLGhSqU9V2K",
+    "isAuthenticated": true,
+    "cart": [],
+    "sale": [],
+    "role": "user"
+  }
+]

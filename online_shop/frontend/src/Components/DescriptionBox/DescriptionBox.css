@@ -1,0 +1,261 @@
+
+.descriptionbox {
+    margin: 120px 170px;
+    font-family: Arial, sans-serif;
+    background: #FFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.descriptionbox-navigator {
+    display: flex;
+    border-bottom: 1px solid #D0D0D0;
+}
+
+.descriptionbox-nav-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 170px;
+    height: 70px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.descriptionbox-nav-box:hover {
+    background: #F5F5F5;
+}
+
+.descriptionbox-nav-box.active {
+    background: #FFF;
+    border-bottom: 3px solid #000;
+    color: #000;
+}
+
+.descriptionbox-nav-box.fade {
+    background: #FBFBFB;
+    color: #555;
+}
+
+.decriptionbox-description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 1px solid #D0D0D0;
+    padding: 48px;
+    padding-bottom: 70px;
+    line-height: 1.6;
+    font-size: 14px;
+    color: #333;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.descriptionbox-reviews {
+    padding: 48px;
+    border: 1px solid #D0D0D0;
+    border-top: none;
+    background: #FAFAFA;
+}
+
+.average-rating {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment {
+    background: #FFF;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 14px;
+    color: #444;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-comment-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #FFF;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.add-comment-form textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    resize: none;
+}
+
+.add-comment-form input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #D0D0D0;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.add-comment-form button {
+    align-self: flex-start;
+    background: #000;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-comment-form button:hover {
+    background: #444;
+}
+p{
+    margin: 20px;
+}
+
+
+@media (max-width: 1200px) {
+    .descriptionbox {
+        margin: 60px 90px;
+    }
+
+    .descriptionbox-navigator {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .descriptionbox-nav-box {
+        width: 150px;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .decriptionbox-description {
+        padding: 30px;
+    }
+
+    .descriptionbox-reviews {
+        padding: 30px;
+    }
+
+    .add-comment-form {
+        padding: 15px;
+    }
+
+    .add-comment-form textarea {
+        height: 70px;
+    }
+
+    .add-comment-form input[type="number"] {
+        width: 40px;
+    }
+
+    .add-comment-form button {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .descriptionbox {
+        margin: 30px 40px;
+    }
+
+    .descriptionbox-navigator {
+        flex-direction: column;
+    }
+
+    .descriptionbox-nav-box {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .decriptionbox-description {
+        padding: 20px;
+    }
+
+    .descriptionbox-reviews {
+        padding: 20px;
+    }
+
+    .add-comment-form {
+        padding: 10px;
+    }
+
+    .add-comment-form textarea {
+        height: 60px;
+    }
+
+    .add-comment-form input[type="number"] {
+        width: 40px;
+    }
+
+    .add-comment-form button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .descriptionbox {
+        margin: 20px 20px;
+    }
+
+    .descriptionbox-navigator {
+        flex-direction: column;
+    }
+
+    .descriptionbox-nav-box {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .decriptionbox-description {
+        padding: 15px;
+    }
+
+    .descriptionbox-reviews {
+        padding: 15px;
+    }
+
+    .add-comment-form {
+        padding: 8px;
+    }
+
+    .add-comment-form textarea {
+        height: 50px;
+    }
+
+    .add-comment-form input[type="number"] {
+        width: 35px;
+    }
+
+    .add-comment-form button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

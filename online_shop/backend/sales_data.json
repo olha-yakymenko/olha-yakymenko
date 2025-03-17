@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Product A",
+    "totalQuantity": 50,
+    "totalRevenue": 500,
+    "sales": {
+      "2024-01-10": {
+        "quantity": 50,
+        "revenue": 500
+      }
+    }
+  },
+  {
+    "name": "Product B",
+    "totalQuantity": 30,
+    "totalRevenue": 300,
+    "sales": {
+      "2024-02-15": {
+        "quantity": 30,
+        "revenue": 300
+      }
+    }
+  },
+  {
+    "name": "Product C",
+    "totalQuantity": 20,
+    "totalRevenue": 200,
+    "sales": {
+      "2024-03-20": {
+        "quantity": 20,
+        "revenue": 200
+      }
+    }
+  },
+  {
+    "name": "Women Long Skirt ",
+    "totalQuantity": 3,
+    "totalRevenue": 195,
+    "sales": {
+      "2025-01-16": {
+        "quantity": 3,
+        "revenue": 195
+      },
+      "2025-01-17": {
+        "quantity": 6,
+        "revenue": 390
+      },
+      "2025-01-18": {
+        "quantity": 3,
+        "revenue": 195
+      }
+    }
+  },
+  {
+    "name": "Women Beach Dress",
+    "totalQuantity": 14,
+    "totalRevenue": 1190,
+    "sales": {
+      "2025-01-17": {
+        "quantity": 8,
+        "revenue": 680
+      },
+      "2025-01-18": {
+        "quantity": 6,
+        "revenue": 510
+      }
+    }
+  },
+  {
+    "name": "Women Blouse with flowers",
+    "totalQuantity": 1,
+    "totalRevenue": 65,
+    "sales": {
+      "2025-01-18": {
+        "quantity": 1,
+        "revenue": 65
+      }
+    }
+  }
+]

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="4.163">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2025-01-08T07:03:17" time="2.868" tests="3">
+    <testcase classname=" renders Shop link" name=" renders Shop link" time="0.937">
+    </testcase>
+    <testcase classname=" renders LoginSignup component on /login route" name=" renders LoginSignup component on /login route" time="0.135">
+    </testcase>
+    <testcase classname=" renders SearchResults component on /search-results route" name=" renders SearchResults component on /search-results route" time="0.009">
+    </testcase>
+  </testsuite>
+</testsuites>

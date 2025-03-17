@@ -1,0 +1,204 @@
+
+
+
+h2 {
+    font-size: 24px;
+    color: #ff8da1; 
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .checkout-form {
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    color: #ff8da1;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ff8da1;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #ffafc4; 
+    outline: none;
+  }
+  
+  button {
+    background-color: #ff8da1; 
+    color: white;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .order_button:hover {
+    background-color: #ffafc4; 
+  }
+  
+  .order_button:active {
+    background-color: #ff7a91;
+  }
+  
+  .error-message {
+    color: #ff4c4c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .order_button:nth-child(1) {
+    width: 48%;
+  }
+  
+  .order_button:nth-child(2) {
+    width: 48%;
+  }
+  
+  .order-summary {
+    padding: 20px;
+    background-color: #fff7f7;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .order-summary p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .order-summary p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff8da1;
+  }
+
+  .message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+  
+  @media screen and (max-width: 1200px) {
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  
+    .order_button:nth-child(1),
+    .order_button:nth-child(2) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 20px;
+    }
+  
+    input, select {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .form-group {
+      margin-bottom: 15px;
+    }
+  
+    .checkout-form h2 {
+      font-size: 18px;
+    }
+  
+    .error-message {
+      font-size: 12px;
+    }
+  
+    .order-summary p {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .app-container {
+      padding: 15px;
+      max-width: 100%;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    input, select {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .form-group {
+      margin-bottom: 12px;
+    }
+  
+    .checkout-form h2 {
+      font-size: 16px;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .order_button {
+      width: 100%;
+      font-size: 14px;
+      padding: 12px;
+    }
+  
+    .order-summary p {
+      font-size: 12px;
+    }
+  }
+  
