@@ -1,0 +1,95 @@
+.post {
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.post-header p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.post-menu-icon {
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.post-menu-icon:hover {
+  color: #000;
+}
+
+.post-menu {
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 8px;
+}
+
+.post-menu button {
+  background: none;
+  border: none;
+  color: #555;
+  padding: 8px 12px;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.post-menu button:hover {
+  background-color: #f5f5f5;
+  color: #000;
+}
+
+.post-menu.hidden {
+  display: none;
+}
+
+.like-com {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.like-com .like-button,
+.like-com .comment-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.like-com .like-button:hover,
+.like-com .comment-icon:hover {
+  transform: scale(1.2);
+}
