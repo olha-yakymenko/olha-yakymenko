@@ -1,0 +1,7 @@
+coverage==6.5.0
+parameterized
+requests
+behave
+flask
+unittest_assertions
+pymongo

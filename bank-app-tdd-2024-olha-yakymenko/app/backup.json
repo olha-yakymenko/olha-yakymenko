@@ -1,0 +1,16 @@
+[
+    {
+        "imie": "Jan",
+        "nazwisko": "Kowalski",
+        "pesel": "12345678901",
+        "saldo": 100,
+        "historia": [100]
+    },
+    {
+        "imie": "Anna",
+        "nazwisko": "Nowak",
+        "pesel": "98765432101",
+        "saldo": 50,
+        "historia": [50]
+    }
+]

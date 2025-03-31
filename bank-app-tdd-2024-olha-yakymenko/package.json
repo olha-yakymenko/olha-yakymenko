@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "coverage": "^0.4.1",
+    "docker": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "requests": "^0.3.0"
+  }
+}
