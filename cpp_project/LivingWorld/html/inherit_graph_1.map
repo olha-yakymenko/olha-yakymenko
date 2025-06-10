@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_organism.html" title=" " alt="" coords="5,104,83,130"/>
+<area shape="rect" id="Node000001" href="$class_animal.html" title=" " alt="" coords="131,55,192,80"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="90,95,129,78,131,83,92,100"/>
+<area shape="rect" id="Node000004" href="$class_plant.html" title=" " alt="" coords="136,128,187,154"/>
+<area shape="poly" id="edge4_Node000000_Node000004" title=" " alt="" coords="98,125,136,133,134,138,97,130"/>
+<area shape="rect" id="Node000002" href="$class_sheep.html" title=" " alt="" coords="250,5,309,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="205,46,249,28,251,33,207,51"/>
+<area shape="rect" id="Node000003" href="$class_wolf.html" title=" " alt="" coords="256,55,303,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="208,65,256,65,256,70,208,70"/>
+<area shape="rect" id="Node000005" href="$class_dandelion.html" title=" " alt="" coords="240,104,319,130"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="201,130,239,122,240,127,202,135"/>
+<area shape="rect" id="Node000006" href="$class_grass.html" title=" " alt="" coords="252,153,308,179"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="202,147,252,158,250,163,201,152"/>
+<area shape="rect" id="Node000007" href="$class_toadstool.html" title=" " alt="" coords="241,203,318,228"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="197,160,241,189,258,200,255,204,239,194,194,165"/>
+</map>

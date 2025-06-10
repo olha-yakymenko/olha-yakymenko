@@ -1,0 +1,17 @@
+<map id="Organism" name="Organism">
+<area shape="rect" id="Node000001" title=" " alt="" coords="117,5,194,31"/>
+<area shape="rect" id="Node000002" href="$class_animal.html" title=" " alt="" coords="81,79,142,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,46,122,80,117,77,138,43"/>
+<area shape="rect" id="Node000005" href="$class_plant.html" title=" " alt="" coords="220,79,271,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="184,39,232,77,229,81,181,43"/>
+<area shape="rect" id="Node000003" href="$class_sheep.html" title=" " alt="" coords="5,153,64,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="89,117,49,154,46,150,86,114"/>
+<area shape="rect" id="Node000004" href="$class_wolf.html" title=" " alt="" coords="88,153,136,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="114,120,114,152,109,152,109,120"/>
+<area shape="rect" id="Node000006" href="$class_dandelion.html" title=" " alt="" coords="160,153,240,178"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="232,119,210,154,205,151,227,116"/>
+<area shape="rect" id="Node000007" href="$class_grass.html" title=" " alt="" coords="264,153,320,178"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="263,116,286,151,282,154,259,119"/>
+<area shape="rect" id="Node000008" href="$class_toadstool.html" title=" " alt="" coords="344,153,421,178"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="283,110,360,150,358,154,281,115"/>
+</map>

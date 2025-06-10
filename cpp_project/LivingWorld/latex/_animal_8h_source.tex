@@ -1,0 +1,29 @@
+\doxysection{Animal.\+h}
+\hypertarget{_animal_8h_source}{}\label{_animal_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Organism.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }Animal\ :\ \textcolor{keyword}{public}\ Organism\ \{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ Animal(\textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{class_position}{Position}}\ position,\ \mbox{\hyperlink{class_world}{World}}*\ world);}
+\DoxyCodeLine{00008\ \ \ \ \ Animal();}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Metody\ wirtualne}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ move(\textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ spread()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ toString()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ collision(Organism*\ other)\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ Animal*\ createOffspring(\mbox{\hyperlink{class_position}{Position}}\ pos)\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ Animal*\ clone()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ std::pair<int,\ int>\ findBestMove()\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ reproduce(Animal*\ partner);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ draw(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ previousPosition;}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

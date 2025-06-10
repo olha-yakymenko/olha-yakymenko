@@ -1,0 +1,74 @@
+\doxysection{World Class Reference}
+\hypertarget{class_world}{}\label{class_world}\index{World@{World}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_world_a4e2e4d3479eb54fe2b197d21e3f0c713}\label{class_world_a4e2e4d3479eb54fe2b197d21e3f0c713} 
+{\bfseries World} (int worldX, int worldY)
+\item 
+\Hypertarget{class_world_a9afa612ee219369660346b2bfe3997ea}\label{class_world_a9afa612ee219369660346b2bfe3997ea} 
+int {\bfseries get\+WorldX} ()
+\item 
+\Hypertarget{class_world_af60529e63d81a1020ca2e42b926106a1}\label{class_world_af60529e63d81a1020ca2e42b926106a1} 
+void {\bfseries set\+WorldX} (int worldX)
+\item 
+\Hypertarget{class_world_ae961293e46719d44f111a0662b8bec09}\label{class_world_ae961293e46719d44f111a0662b8bec09} 
+int {\bfseries get\+WorldY} ()
+\item 
+\Hypertarget{class_world_a10c1578706351c5b726331a6f7046298}\label{class_world_a10c1578706351c5b726331a6f7046298} 
+void {\bfseries set\+WorldY} (int worldY)
+\item 
+\Hypertarget{class_world_aca022ffbbcf89737ab8cf87f8d1b1715}\label{class_world_aca022ffbbcf89737ab8cf87f8d1b1715} 
+void {\bfseries add\+Organism} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}organism)
+\item 
+\Hypertarget{class_world_a724ca8294355632b6437b41d1d4bfa5b}\label{class_world_a724ca8294355632b6437b41d1d4bfa5b} 
+vector$<$ \mbox{\hyperlink{class_position}{Position}} $>$ {\bfseries get\+Vector\+Of\+Free\+Positions\+Around} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+\Hypertarget{class_world_a42e2366dc9e3353c0b729e7f9a937e36}\label{class_world_a42e2366dc9e3353c0b729e7f9a937e36} 
+void {\bfseries make\+Turn} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\Hypertarget{class_world_a9bbcc1ea79ffbc8d0bfddc15576bfed1}\label{class_world_a9bbcc1ea79ffbc8d0bfddc15576bfed1} 
+void {\bfseries render\+World} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\Hypertarget{class_world_aad2a093486bb83f1dd8d68b28c478dd2}\label{class_world_aad2a093486bb83f1dd8d68b28c478dd2} 
+void {\bfseries write\+World} (string file\+Name)
+\item 
+\Hypertarget{class_world_af0c55e9d4246b132c93ca433036410ab}\label{class_world_af0c55e9d4246b132c93ca433036410ab} 
+void {\bfseries read\+World} (string file\+Name)
+\item 
+\Hypertarget{class_world_af7c009f3262a43bc4feb90c2d271e68c}\label{class_world_af7c009f3262a43bc4feb90c2d271e68c} 
+std\+::string {\bfseries to\+String} () const
+\item 
+\Hypertarget{class_world_a3029ffd758016ecdc9fe0e3c519e001d}\label{class_world_a3029ffd758016ecdc9fe0e3c519e001d} 
+bool {\bfseries is\+Position\+Free} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+\Hypertarget{class_world_a2af0b8d619b76d20606623045f715884}\label{class_world_a2af0b8d619b76d20606623045f715884} 
+\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Organism\+At} (const \mbox{\hyperlink{class_position}{Position}} \&pos) const
+\item 
+\Hypertarget{class_world_a84f4e1e6a68e6b46c5a4df1a44a3e99e}\label{class_world_a84f4e1e6a68e6b46c5a4df1a44a3e99e} 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries find\+Empty\+Adjacent\+Position} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+\Hypertarget{class_world_a3597373077654d36ebf691aacf107f72}\label{class_world_a3597373077654d36ebf691aacf107f72} 
+void {\bfseries remove\+Organism\+At\+Position} (\mbox{\hyperlink{class_position}{Position}} pos)
+\item 
+\Hypertarget{class_world_a88e4333e365b33b69305b52951fa226e}\label{class_world_a88e4333e365b33b69305b52951fa226e} 
+void {\bfseries remove\+Dead\+Organisms} ()
+\item 
+\Hypertarget{class_world_a35261908eae72e20d82289ead7c00207}\label{class_world_a35261908eae72e20d82289ead7c00207} 
+\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Organism\+From\+Position} (\mbox{\hyperlink{class_position}{Position}} pos)
+\item 
+\Hypertarget{class_world_ae34a58fc35b3716d8fe7c1910da44f1c}\label{class_world_ae34a58fc35b3716d8fe7c1910da44f1c} 
+std\+::vector$<$ \mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries get\+Organisms} ()
+\item 
+\Hypertarget{class_world_a9590a5c079a9077e74ba247ebeaa11de}\label{class_world_a9590a5c079a9077e74ba247ebeaa11de} 
+int {\bfseries get\+Current\+Turn} () const
+\item 
+\Hypertarget{class_world_aa25756c40e57c7dc545da627792f1cc3}\label{class_world_aa25756c40e57c7dc545da627792f1cc3} 
+void {\bfseries handle\+Death} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}organism)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+World.\+h\item 
+World.\+cpp\end{DoxyCompactItemize}

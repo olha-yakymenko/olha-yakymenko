@@ -1,0 +1,11 @@
+<map id="Plant" name="Plant">
+<area shape="rect" id="Node000001" title=" " alt="" coords="111,79,163,105"/>
+<area shape="rect" id="Node000003" href="$class_dandelion.html" title=" " alt="" coords="5,153,85,178"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,117,62,154,59,150,108,112"/>
+<area shape="rect" id="Node000004" href="$class_grass.html" title=" " alt="" coords="109,153,165,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,120,140,152,134,152,134,120"/>
+<area shape="rect" id="Node000005" href="$class_toadstool.html" title=" " alt="" coords="189,153,266,178"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="166,112,214,150,211,154,162,117"/>
+<area shape="rect" id="Node000002" href="$class_organism.html" title=" " alt="" coords="98,5,176,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,46,140,79,134,79,134,46"/>
+</map>

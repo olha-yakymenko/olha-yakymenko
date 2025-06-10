@@ -1,0 +1,255 @@
+\doxysection{Sheep Class Reference}
+\hypertarget{class_sheep}{}\label{class_sheep}\index{Sheep@{Sheep}}
+
+
+Inheritance diagram for Sheep\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_sheep__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sheep\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_sheep__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sheep_a0dcba40ca874b1ebd23e9ad8675db119}\label{class_sheep_a0dcba40ca874b1ebd23e9ad8675db119} 
+{\bfseries Sheep} (\mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_sheep_afd0337795d2b567d4a9be5a7bdd61650}\label{class_sheep_afd0337795d2b567d4a9be5a7bdd61650} 
+{\bfseries Sheep} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_sheep_a23e684bc442478160a7a445771facd99}{get\+Position}} () const override
+\item 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sheep_a4e4364e3ebcd474b6941dc83e66a5be6}{clone}} () const override
+\item 
+std\+::string \mbox{\hyperlink{class_sheep_a42ca28ce7d3bdac7ef6ea07662ae81ce}{to\+String}} () const override
+\item 
+void \mbox{\hyperlink{class_sheep_a0e3372569f7b1c3756dc4ff26446e4e5}{move}} (int dx, int dy) override
+\item 
+void \mbox{\hyperlink{class_sheep_a869c935e1e5648462de4599aaf4939ff}{collision}} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}other) override
+\item 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_sheep_a907f1a3d6238925b9391056510b4ebc4}{create\+Offspring}} (\mbox{\hyperlink{class_position}{Position}} pos) override
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_sheep_a2bc258cf723aa77359018dcd7d7c71fc}{find\+Best\+Move}} () override
+\item 
+\Hypertarget{class_sheep_aec7a3a1e6a5bad0ffe08079a27003603}\label{class_sheep_aec7a3a1e6a5bad0ffe08079a27003603} 
+{\bfseries Sheep} (const \mbox{\hyperlink{class_sheep}{Sheep}} \&other)
+\item 
+\Hypertarget{class_sheep_aca876b654c566558dc790ceb8cb32d70}\label{class_sheep_aca876b654c566558dc790ceb8cb32d70} 
+{\bfseries Sheep} (\mbox{\hyperlink{class_sheep}{Sheep}} \&\&other) noexcept
+\item 
+\Hypertarget{class_sheep_a7b044b2e98d212f56ea9137ec04caf79}\label{class_sheep_a7b044b2e98d212f56ea9137ec04caf79} 
+\mbox{\hyperlink{class_sheep}{Sheep}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_sheep}{Sheep}} \&other)
+\item 
+\Hypertarget{class_sheep_a0c161e4a558c207a9aa2db4012547bdb}\label{class_sheep_a0c161e4a558c207a9aa2db4012547bdb} 
+\mbox{\hyperlink{class_sheep}{Sheep}} \& {\bfseries operator=} (\mbox{\hyperlink{class_sheep}{Sheep}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{class_sheep_a3e6ce1edb736c526390e87ee10ed29f3}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Animal} (int power, \mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual void \mbox{\hyperlink{class_animal_ade2c9c36b886c625d620b32ab85ff3f3}{spread}} () override
+\item 
+virtual void {\bfseries reproduce} (\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*}partner)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Organism} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, int initiative, int live\+Length, int power\+To\+Reproduce, char sign, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual int {\bfseries get\+Power} () const
+\item 
+virtual void {\bfseries set\+Power} (int power)
+\item 
+virtual void {\bfseries set\+Position} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+virtual std\+::string {\bfseries get\+Species} () const
+\item 
+virtual void {\bfseries set\+Species} (const std\+::string \&spec)
+\item 
+virtual int {\bfseries get\+Initiative} () const
+\item 
+virtual void {\bfseries set\+Initiative} (int initiative)
+\item 
+virtual int {\bfseries get\+Live\+Length} () const
+\item 
+virtual void {\bfseries set\+Live\+Length} (int live\+Length)
+\item 
+virtual int {\bfseries get\+Power\+To\+Reproduce} () const
+\item 
+virtual void {\bfseries set\+Power\+To\+Reproduce} (int power\+To\+Reproduce)
+\item 
+virtual char {\bfseries get\+Sign} () const
+\item 
+virtual void {\bfseries set\+Sign} (char sign)
+\item 
+virtual \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries get\+World} () const
+\item 
+virtual void {\bfseries set\+World} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual bool {\bfseries is\+Alive} () const
+\item 
+virtual void {\bfseries increase\+Power} ()
+\item 
+virtual void {\bfseries decrease\+Life} ()
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+{\bfseries Organism} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+{\bfseries Organism} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+virtual void {\bfseries set\+Ancestors\+History} (const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \&history)
+\item 
+virtual int {\bfseries get\+Birth\+Turn} () const
+\item 
+virtual void {\bfseries set\+Birth\+Turn} (int turn)
+\item 
+virtual void {\bfseries add\+Ancestor} (int birth\+Turn, int death\+Turn)
+\item 
+virtual void {\bfseries set\+Death\+Turn} (int death\+Turn)
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \& {\bfseries get\+Ancestors\+History} () const
+\item 
+virtual int {\bfseries get\+Death\+Turn} () const
+\item 
+virtual void {\bfseries update\+Ancestor\+Death\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries previous\+Position}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries power}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries position}
+\item 
+std\+::string {\bfseries species}
+\item 
+int {\bfseries initiative}
+\item 
+int {\bfseries live\+Length}
+\item 
+int {\bfseries power\+To\+Reproduce}
+\item 
+int {\bfseries initial\+Power\+To\+Reproduce}
+\item 
+char {\bfseries sign}
+\item 
+\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries world}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ {\bfseries ancestors\+History}
+\item 
+int {\bfseries birth\+Turn}
+\item 
+int {\bfseries death\+Turn}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries last\+Position}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_sheep_a4e4364e3ebcd474b6941dc83e66a5be6}\index{Sheep@{Sheep}!clone@{clone}}
+\index{clone@{clone}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_sheep_a4e4364e3ebcd474b6941dc83e66a5be6} 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} Sheep\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_sheep_a869c935e1e5648462de4599aaf4939ff}\index{Sheep@{Sheep}!collision@{collision}}
+\index{collision@{collision}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{collision()}{collision()}}
+{\footnotesize\ttfamily \label{class_sheep_a869c935e1e5648462de4599aaf4939ff} 
+void Sheep\+::collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_sheep_a907f1a3d6238925b9391056510b4ebc4}\index{Sheep@{Sheep}!createOffspring@{createOffspring}}
+\index{createOffspring@{createOffspring}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{createOffspring()}{createOffspring()}}
+{\footnotesize\ttfamily \label{class_sheep_a907f1a3d6238925b9391056510b4ebc4} 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} Sheep\+::create\+Offspring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_sheep_a3e6ce1edb736c526390e87ee10ed29f3}\index{Sheep@{Sheep}!draw@{draw}}
+\index{draw@{draw}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_sheep_a3e6ce1edb736c526390e87ee10ed29f3} 
+void Sheep\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_sheep_a2bc258cf723aa77359018dcd7d7c71fc}\index{Sheep@{Sheep}!findBestMove@{findBestMove}}
+\index{findBestMove@{findBestMove}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{findBestMove()}{findBestMove()}}
+{\footnotesize\ttfamily \label{class_sheep_a2bc258cf723aa77359018dcd7d7c71fc} 
+std\+::pair$<$ int, int $>$ Sheep\+::find\+Best\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_sheep_a23e684bc442478160a7a445771facd99}\index{Sheep@{Sheep}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_sheep_a23e684bc442478160a7a445771facd99} 
+\mbox{\hyperlink{class_position}{Position}} Sheep\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_organism}{Organism}}.
+
+\Hypertarget{class_sheep_a0e3372569f7b1c3756dc4ff26446e4e5}\index{Sheep@{Sheep}!move@{move}}
+\index{move@{move}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_sheep_a0e3372569f7b1c3756dc4ff26446e4e5} 
+void Sheep\+::move (\begin{DoxyParamCaption}\item[{int}]{dx}{, }\item[{int}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_sheep_a42ca28ce7d3bdac7ef6ea07662ae81ce}\index{Sheep@{Sheep}!toString@{toString}}
+\index{toString@{toString}!Sheep@{Sheep}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_sheep_a42ca28ce7d3bdac7ef6ea07662ae81ce} 
+std\+::string Sheep\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_animal}{Animal}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sheep.\+h\item 
+Sheep.\+cpp\end{DoxyCompactItemize}

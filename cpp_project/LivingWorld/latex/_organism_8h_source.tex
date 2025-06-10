@@ -1,0 +1,125 @@
+\doxysection{Organism.\+h}
+\hypertarget{_organism_8h_source}{}\label{_organism_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Position.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_world}{World}};\ \ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }Ancestor\ \{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keywordtype}{int}\ birthTurn;}
+\DoxyCodeLine{00012\ \ \ \textcolor{keywordtype}{int}\ deathTurn;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{comment}{//\ Default\ constructor}}
+\DoxyCodeLine{00016\ \ \ Ancestor()\ :\ birthTurn(0),\ deathTurn(-\/1)\ \{\}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ Ancestor(\textcolor{keywordtype}{int}\ birthTurn,\ \textcolor{keywordtype}{int}\ deathTurn)}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ :\ birthTurn(birthTurn),\ deathTurn(deathTurn)\ \{\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }Organism\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Konstruktor\ domyślny}}
+\DoxyCodeLine{00027\ \ \ \ \ Organism();}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Konstruktor\ z\ parametrami}}
+\DoxyCodeLine{00030\ \ \ \ \ Organism(\textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{class_position}{Position}}\ position,\ std::string\ species,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ initiative,\ \textcolor{keywordtype}{int}\ liveLength,\ \textcolor{keywordtype}{int}\ powerToReproduce,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ sign,\ \mbox{\hyperlink{class_world}{World}}*\ world);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Wirtualny\ destruktor}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~Organism()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Wirtualne\ metody,\ które\ muszą\ zostać\ zaimplementowane\ w\ klasach\ dziedziczących}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ move(\textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy)\ =\ 0;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ Organism*\ clone()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Gettery\ i\ settery}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getPower()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setPower(\textcolor{keywordtype}{int}\ power);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_position}{Position}}\ getPosition()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setPosition(\mbox{\hyperlink{class_position}{Position}}\ position);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Metoda\ spread()\ jest\ wirtualna}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ spread();\ \ \textcolor{comment}{//\ Implementacja\ zależna\ od\ klasy\ dziedziczącej}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ Metoda\ toString()\ jest\ wirtualna}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ toString()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Gettery\ i\ settery\ dla\ pozostałych\ pól}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ getSpecies()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setSpecies(\textcolor{keyword}{const}\ std::string\&\ spec);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getInitiative()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setInitiative(\textcolor{keywordtype}{int}\ initiative);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getLiveLength()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setLiveLength(\textcolor{keywordtype}{int}\ liveLength);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getPowerToReproduce()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setPowerToReproduce(\textcolor{keywordtype}{int}\ powerToReproduce);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{char}\ getSign()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setSign(\textcolor{keywordtype}{char}\ sign);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_world}{World}}*\ getWorld()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setWorld(\mbox{\hyperlink{class_world}{World}}*\ world);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ isAlive()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ increasePower();}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ decreaseLife();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ collision(Organism*\ other)\ =\ 0;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ draw(SDL\_Renderer*\ renderer)\ =\ 0;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ Organism\&\ operator=(\textcolor{keyword}{const}\ Organism\&\ other);}
+\DoxyCodeLine{00083\ Organism\&\ operator=(Organism\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \textcolor{comment}{//\ Konstruktor\ kopiujący}}
+\DoxyCodeLine{00087\ Organism(\textcolor{keyword}{const}\ Organism\&\ other);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{comment}{//\ Konstruktor\ przenoszący}}
+\DoxyCodeLine{00090\ Organism(Organism\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setAncestorsHistory(\textcolor{keyword}{const}\ std::vector<Ancestor>\&\ history);}
+\DoxyCodeLine{00093\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getBirthTurn()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ birthTurn;\ \}}
+\DoxyCodeLine{00094\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setBirthTurn(\textcolor{keywordtype}{int}\ turn)\ \{\ birthTurn\ =\ turn;\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ addAncestor(\textcolor{keywordtype}{int}\ birthTurn,\ \textcolor{keywordtype}{int}\ deathTurn);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ setDeathTurn(\textcolor{keywordtype}{int}\ deathTurn);}
+\DoxyCodeLine{00099\ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ std::vector<Ancestor>\&\ getAncestorsHistory()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{comment}{//\ Dodaj\ te\ deklaracje\ do\ pliku\ Organism.h}}
+\DoxyCodeLine{00102\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ getDeathTurn()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ updateAncestorDeathTurn();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{int}\ power;}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ position;}
+\DoxyCodeLine{00108\ \ \ \ \ std::string\ species;}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ initiative;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ liveLength;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{int}\ powerToReproduce;}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{int}\ initialPowerToReproduce;\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{char}\ sign;}
+\DoxyCodeLine{00114\ \ \ \ \ \mbox{\hyperlink{class_world}{World}}*\ world;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ std::vector<Ancestor>\ ancestorsHistory;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ birthTurn;}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ deathTurn;}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ lastPosition;}
+\DoxyCodeLine{00120\ \};}
+
+\end{DoxyCode}

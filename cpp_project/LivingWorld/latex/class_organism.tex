@@ -1,0 +1,185 @@
+\doxysection{Organism Class Reference}
+\hypertarget{class_organism}{}\label{class_organism}\index{Organism@{Organism}}
+
+
+Inheritance diagram for Organism\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_organism__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Organism\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_organism__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_organism_adc069ea7fa101c8dac21000b739d4667}\label{class_organism_adc069ea7fa101c8dac21000b739d4667} 
+{\bfseries Organism} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, int initiative, int live\+Length, int power\+To\+Reproduce, char sign, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_organism_a3e1be9617054224b6528d2c9e33c7839}\label{class_organism_a3e1be9617054224b6528d2c9e33c7839} 
+virtual void {\bfseries move} (int dx, int dy)=0
+\item 
+\Hypertarget{class_organism_a1808c08c3ece1ae54b26eacb211b2ce4}\label{class_organism_a1808c08c3ece1ae54b26eacb211b2ce4} 
+virtual \mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*} {\bfseries clone} () const =0
+\item 
+\Hypertarget{class_organism_ac35e6f64b0b6b69388f2dfdf1344ae84}\label{class_organism_ac35e6f64b0b6b69388f2dfdf1344ae84} 
+virtual int {\bfseries get\+Power} () const
+\item 
+\Hypertarget{class_organism_ad49c62477e0d6a2604709d457f35986d}\label{class_organism_ad49c62477e0d6a2604709d457f35986d} 
+virtual void {\bfseries set\+Power} (int power)
+\item 
+\Hypertarget{class_organism_a59e0a59e39da8d2feecd411d642ee2a1}\label{class_organism_a59e0a59e39da8d2feecd411d642ee2a1} 
+virtual \mbox{\hyperlink{class_position}{Position}} {\bfseries get\+Position} () const
+\item 
+\Hypertarget{class_organism_aa128e6893b7ad1cff695a2fa914f86d1}\label{class_organism_aa128e6893b7ad1cff695a2fa914f86d1} 
+virtual void {\bfseries set\+Position} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+\Hypertarget{class_organism_a12d61ebc588a94cdfe6c8e65779d78b4}\label{class_organism_a12d61ebc588a94cdfe6c8e65779d78b4} 
+virtual void {\bfseries spread} ()
+\item 
+\Hypertarget{class_organism_ab3bc609d11dc5618352247410e3ae984}\label{class_organism_ab3bc609d11dc5618352247410e3ae984} 
+virtual std\+::string {\bfseries to\+String} () const
+\item 
+\Hypertarget{class_organism_ac4eebbc29847ed28a8690d31ae3abab0}\label{class_organism_ac4eebbc29847ed28a8690d31ae3abab0} 
+virtual std\+::string {\bfseries get\+Species} () const
+\item 
+\Hypertarget{class_organism_a876dceabb6aa8f2502712e1184a95978}\label{class_organism_a876dceabb6aa8f2502712e1184a95978} 
+virtual void {\bfseries set\+Species} (const std\+::string \&spec)
+\item 
+\Hypertarget{class_organism_a2c0d16b856a5bb9b157e2dcc62d6f8bd}\label{class_organism_a2c0d16b856a5bb9b157e2dcc62d6f8bd} 
+virtual int {\bfseries get\+Initiative} () const
+\item 
+\Hypertarget{class_organism_adb2119aae7b6851950839318906c650b}\label{class_organism_adb2119aae7b6851950839318906c650b} 
+virtual void {\bfseries set\+Initiative} (int initiative)
+\item 
+\Hypertarget{class_organism_aa455201fde53f5c11df2141934c0734a}\label{class_organism_aa455201fde53f5c11df2141934c0734a} 
+virtual int {\bfseries get\+Live\+Length} () const
+\item 
+\Hypertarget{class_organism_a99c7555650e1b88b09804b27116e8fdf}\label{class_organism_a99c7555650e1b88b09804b27116e8fdf} 
+virtual void {\bfseries set\+Live\+Length} (int live\+Length)
+\item 
+\Hypertarget{class_organism_a1cfbeb479eb6d44c03b889cd657e2631}\label{class_organism_a1cfbeb479eb6d44c03b889cd657e2631} 
+virtual int {\bfseries get\+Power\+To\+Reproduce} () const
+\item 
+\Hypertarget{class_organism_a6866a63db04662fca5b25d7da4e2cf19}\label{class_organism_a6866a63db04662fca5b25d7da4e2cf19} 
+virtual void {\bfseries set\+Power\+To\+Reproduce} (int power\+To\+Reproduce)
+\item 
+\Hypertarget{class_organism_afe2b77f236d57abc01f1ba73896b84cc}\label{class_organism_afe2b77f236d57abc01f1ba73896b84cc} 
+virtual char {\bfseries get\+Sign} () const
+\item 
+\Hypertarget{class_organism_a9947fac47a26c4a22ad793d29acd3541}\label{class_organism_a9947fac47a26c4a22ad793d29acd3541} 
+virtual void {\bfseries set\+Sign} (char sign)
+\item 
+\Hypertarget{class_organism_a5142c7669129dc2a3f0700338bef1d71}\label{class_organism_a5142c7669129dc2a3f0700338bef1d71} 
+virtual \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries get\+World} () const
+\item 
+\Hypertarget{class_organism_aa78caddd14d767658c6be8831047b341}\label{class_organism_aa78caddd14d767658c6be8831047b341} 
+virtual void {\bfseries set\+World} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_organism_a648059cc7c12f20b88bf2de03fcd4d32}\label{class_organism_a648059cc7c12f20b88bf2de03fcd4d32} 
+virtual bool {\bfseries is\+Alive} () const
+\item 
+\Hypertarget{class_organism_aca225db873f307ba10a2dd5ecb387dbf}\label{class_organism_aca225db873f307ba10a2dd5ecb387dbf} 
+virtual void {\bfseries increase\+Power} ()
+\item 
+\Hypertarget{class_organism_a376e90c301f179745c95c9f8e457c030}\label{class_organism_a376e90c301f179745c95c9f8e457c030} 
+virtual void {\bfseries decrease\+Life} ()
+\item 
+\Hypertarget{class_organism_a8166514571ab1b5814e7aaa2e38277df}\label{class_organism_a8166514571ab1b5814e7aaa2e38277df} 
+virtual void {\bfseries collision} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}other)=0
+\item 
+\Hypertarget{class_organism_a636177226309efc64921c26b87f04ef7}\label{class_organism_a636177226309efc64921c26b87f04ef7} 
+virtual void {\bfseries draw} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)=0
+\item 
+\Hypertarget{class_organism_a33c26de3cbff75f69a56f3813b2eca9d}\label{class_organism_a33c26de3cbff75f69a56f3813b2eca9d} 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+\Hypertarget{class_organism_a7a95d95511425b59ca3f9da83b420a29}\label{class_organism_a7a95d95511425b59ca3f9da83b420a29} 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+\Hypertarget{class_organism_ac5014ff12dbb22e729f71413ae1e5cec}\label{class_organism_ac5014ff12dbb22e729f71413ae1e5cec} 
+{\bfseries Organism} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+\Hypertarget{class_organism_ae411e22ff0f0d5d8a316065f5944393c}\label{class_organism_ae411e22ff0f0d5d8a316065f5944393c} 
+{\bfseries Organism} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+\Hypertarget{class_organism_a93759a0ce890fe756b6466856ee0e8e9}\label{class_organism_a93759a0ce890fe756b6466856ee0e8e9} 
+virtual void {\bfseries set\+Ancestors\+History} (const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \&history)
+\item 
+\Hypertarget{class_organism_a39fab6a42d2ecddd060b6eb4789ed9b3}\label{class_organism_a39fab6a42d2ecddd060b6eb4789ed9b3} 
+virtual int {\bfseries get\+Birth\+Turn} () const
+\item 
+\Hypertarget{class_organism_a1de98bcac3435d05ca4280c3d5f76817}\label{class_organism_a1de98bcac3435d05ca4280c3d5f76817} 
+virtual void {\bfseries set\+Birth\+Turn} (int turn)
+\item 
+\Hypertarget{class_organism_a816237456f4e76e6e8e01c7f6ffc182e}\label{class_organism_a816237456f4e76e6e8e01c7f6ffc182e} 
+virtual void {\bfseries add\+Ancestor} (int birth\+Turn, int death\+Turn)
+\item 
+\Hypertarget{class_organism_abf0de2813566b7b8e8e0a5d654b2c5e6}\label{class_organism_abf0de2813566b7b8e8e0a5d654b2c5e6} 
+virtual void {\bfseries set\+Death\+Turn} (int death\+Turn)
+\item 
+\Hypertarget{class_organism_a6b32a36c74f329de673a992191fb82a2}\label{class_organism_a6b32a36c74f329de673a992191fb82a2} 
+virtual const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \& {\bfseries get\+Ancestors\+History} () const
+\item 
+\Hypertarget{class_organism_ab7f24abf00de9534129d06238147768a}\label{class_organism_ab7f24abf00de9534129d06238147768a} 
+virtual int {\bfseries get\+Death\+Turn} () const
+\item 
+\Hypertarget{class_organism_ad635df68894c807bae1b9477288555b8}\label{class_organism_ad635df68894c807bae1b9477288555b8} 
+virtual void {\bfseries update\+Ancestor\+Death\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_organism_ab5154bda0926b84a9270dd0f6867e85f}\label{class_organism_ab5154bda0926b84a9270dd0f6867e85f} 
+int {\bfseries power}
+\item 
+\Hypertarget{class_organism_a6c8c530ad074629ddf762176bedebefb}\label{class_organism_a6c8c530ad074629ddf762176bedebefb} 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries position}
+\item 
+\Hypertarget{class_organism_ac36d844bff343518122aa3876f6660af}\label{class_organism_ac36d844bff343518122aa3876f6660af} 
+std\+::string {\bfseries species}
+\item 
+\Hypertarget{class_organism_a9aed2a92d9ac1b16e73b170797f81667}\label{class_organism_a9aed2a92d9ac1b16e73b170797f81667} 
+int {\bfseries initiative}
+\item 
+\Hypertarget{class_organism_a99f483430ecbcf535a344251b34def1f}\label{class_organism_a99f483430ecbcf535a344251b34def1f} 
+int {\bfseries live\+Length}
+\item 
+\Hypertarget{class_organism_a68cc29ff3dfb7613f3d55b73da880ca5}\label{class_organism_a68cc29ff3dfb7613f3d55b73da880ca5} 
+int {\bfseries power\+To\+Reproduce}
+\item 
+\Hypertarget{class_organism_a621ce36db7a7d4cc1803b72f851ec9de}\label{class_organism_a621ce36db7a7d4cc1803b72f851ec9de} 
+int {\bfseries initial\+Power\+To\+Reproduce}
+\item 
+\Hypertarget{class_organism_ad5401e2d2a369d8930a9998c105c1775}\label{class_organism_ad5401e2d2a369d8930a9998c105c1775} 
+char {\bfseries sign}
+\item 
+\Hypertarget{class_organism_a3a6017bf41c57b69453654515632226e}\label{class_organism_a3a6017bf41c57b69453654515632226e} 
+\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries world}
+\item 
+\Hypertarget{class_organism_aff8787439fbfa3d55d56e2287442b94f}\label{class_organism_aff8787439fbfa3d55d56e2287442b94f} 
+std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ {\bfseries ancestors\+History}
+\item 
+\Hypertarget{class_organism_af654b0c243436c74e470c6243483fe0c}\label{class_organism_af654b0c243436c74e470c6243483fe0c} 
+int {\bfseries birth\+Turn}
+\item 
+\Hypertarget{class_organism_a231e4a5ae384f0a34f6ff8424007bd7b}\label{class_organism_a231e4a5ae384f0a34f6ff8424007bd7b} 
+int {\bfseries death\+Turn}
+\item 
+\Hypertarget{class_organism_aa041f33cb64c97878db6c7fca191ec29}\label{class_organism_aa041f33cb64c97878db6c7fca191ec29} 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries last\+Position}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Organism.\+h\item 
+Organism.\+cpp\end{DoxyCompactItemize}

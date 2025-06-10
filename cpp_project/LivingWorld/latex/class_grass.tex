@@ -1,0 +1,214 @@
+\doxysection{Grass Class Reference}
+\hypertarget{class_grass}{}\label{class_grass}\index{Grass@{Grass}}
+
+
+Inheritance diagram for Grass\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_grass__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Grass\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_grass__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_grass_ad467cf45dc37c11dc8e97e96af9096f1}\label{class_grass_ad467cf45dc37c11dc8e97e96af9096f1} 
+{\bfseries Grass} (int power, \mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_grass_a2fdcdb5824ce4be32617691d0d6910b5}\label{class_grass_a2fdcdb5824ce4be32617691d0d6910b5} 
+{\bfseries Grass} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+void \mbox{\hyperlink{class_grass_afc6ef2441e96df0eb88194b4074d3d10}{spread}} () override
+\item 
+\mbox{\hyperlink{class_grass}{Grass}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_grass_aa9a9a80feca84cda2ca2fd730c1f98ac}{clone}} () const override
+\item 
+std\+::string \mbox{\hyperlink{class_grass_ab3bda7d8f5f91bd47a241ae0bc8e8c40}{to\+String}} () const override
+\item 
+void \mbox{\hyperlink{class_grass_a8a271f3ea1740e84a9525709827aa368}{collision}} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}other) override
+\item 
+\Hypertarget{class_grass_a4537dba8dc52fe203baefa0140ed5a9c}\label{class_grass_a4537dba8dc52fe203baefa0140ed5a9c} 
+{\bfseries Grass} (const \mbox{\hyperlink{class_grass}{Grass}} \&other)
+\item 
+\Hypertarget{class_grass_a4219f18e9bafc9e9bc5a7eda8e54bc15}\label{class_grass_a4219f18e9bafc9e9bc5a7eda8e54bc15} 
+{\bfseries Grass} (\mbox{\hyperlink{class_grass}{Grass}} \&\&other) noexcept
+\item 
+\Hypertarget{class_grass_a6c28de6d149662ec74fdf5b4271cc363}\label{class_grass_a6c28de6d149662ec74fdf5b4271cc363} 
+\mbox{\hyperlink{class_grass}{Grass}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_grass}{Grass}} \&other)
+\item 
+\Hypertarget{class_grass_a2a1a6ccab9790c2ea717c0216ecb7f11}\label{class_grass_a2a1a6ccab9790c2ea717c0216ecb7f11} 
+\mbox{\hyperlink{class_grass}{Grass}} \& {\bfseries operator=} (\mbox{\hyperlink{class_grass}{Grass}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{class_grass_a2c6aef844841e7696fb2fdc908a085f8}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Plant} (int power, \mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual void \mbox{\hyperlink{class_plant_a6f8479d6ff0f6f6c997151c9c32a933d}{move}} (int dx, int dy) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Organism} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, int initiative, int live\+Length, int power\+To\+Reproduce, char sign, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual int {\bfseries get\+Power} () const
+\item 
+virtual void {\bfseries set\+Power} (int power)
+\item 
+virtual \mbox{\hyperlink{class_position}{Position}} {\bfseries get\+Position} () const
+\item 
+virtual void {\bfseries set\+Position} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+virtual std\+::string {\bfseries get\+Species} () const
+\item 
+virtual void {\bfseries set\+Species} (const std\+::string \&spec)
+\item 
+virtual int {\bfseries get\+Initiative} () const
+\item 
+virtual void {\bfseries set\+Initiative} (int initiative)
+\item 
+virtual int {\bfseries get\+Live\+Length} () const
+\item 
+virtual void {\bfseries set\+Live\+Length} (int live\+Length)
+\item 
+virtual int {\bfseries get\+Power\+To\+Reproduce} () const
+\item 
+virtual void {\bfseries set\+Power\+To\+Reproduce} (int power\+To\+Reproduce)
+\item 
+virtual char {\bfseries get\+Sign} () const
+\item 
+virtual void {\bfseries set\+Sign} (char sign)
+\item 
+virtual \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries get\+World} () const
+\item 
+virtual void {\bfseries set\+World} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual bool {\bfseries is\+Alive} () const
+\item 
+virtual void {\bfseries increase\+Power} ()
+\item 
+virtual void {\bfseries decrease\+Life} ()
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+{\bfseries Organism} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+{\bfseries Organism} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+virtual void {\bfseries set\+Ancestors\+History} (const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \&history)
+\item 
+virtual int {\bfseries get\+Birth\+Turn} () const
+\item 
+virtual void {\bfseries set\+Birth\+Turn} (int turn)
+\item 
+virtual void {\bfseries add\+Ancestor} (int birth\+Turn, int death\+Turn)
+\item 
+virtual void {\bfseries set\+Death\+Turn} (int death\+Turn)
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \& {\bfseries get\+Ancestors\+History} () const
+\item 
+virtual int {\bfseries get\+Death\+Turn} () const
+\item 
+virtual void {\bfseries update\+Ancestor\+Death\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries power}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries position}
+\item 
+std\+::string {\bfseries species}
+\item 
+int {\bfseries initiative}
+\item 
+int {\bfseries live\+Length}
+\item 
+int {\bfseries power\+To\+Reproduce}
+\item 
+int {\bfseries initial\+Power\+To\+Reproduce}
+\item 
+char {\bfseries sign}
+\item 
+\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries world}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ {\bfseries ancestors\+History}
+\item 
+int {\bfseries birth\+Turn}
+\item 
+int {\bfseries death\+Turn}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries last\+Position}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_grass_aa9a9a80feca84cda2ca2fd730c1f98ac}\index{Grass@{Grass}!clone@{clone}}
+\index{clone@{clone}!Grass@{Grass}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_grass_aa9a9a80feca84cda2ca2fd730c1f98ac} 
+\mbox{\hyperlink{class_grass}{Grass}} \texorpdfstring{$\ast$}{*} Grass\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_grass_a8a271f3ea1740e84a9525709827aa368}\index{Grass@{Grass}!collision@{collision}}
+\index{collision@{collision}!Grass@{Grass}}
+\doxysubsubsection{\texorpdfstring{collision()}{collision()}}
+{\footnotesize\ttfamily \label{class_grass_a8a271f3ea1740e84a9525709827aa368} 
+void Grass\+::collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_grass_a2c6aef844841e7696fb2fdc908a085f8}\index{Grass@{Grass}!draw@{draw}}
+\index{draw@{draw}!Grass@{Grass}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_grass_a2c6aef844841e7696fb2fdc908a085f8} 
+void Grass\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_grass_afc6ef2441e96df0eb88194b4074d3d10}\index{Grass@{Grass}!spread@{spread}}
+\index{spread@{spread}!Grass@{Grass}}
+\doxysubsubsection{\texorpdfstring{spread()}{spread()}}
+{\footnotesize\ttfamily \label{class_grass_afc6ef2441e96df0eb88194b4074d3d10} 
+void Grass\+::spread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_grass_ab3bda7d8f5f91bd47a241ae0bc8e8c40}\index{Grass@{Grass}!toString@{toString}}
+\index{toString@{toString}!Grass@{Grass}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_grass_ab3bda7d8f5f91bd47a241ae0bc8e8c40} 
+std\+::string Grass\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Grass.\+h\item 
+Grass.\+cpp\end{DoxyCompactItemize}

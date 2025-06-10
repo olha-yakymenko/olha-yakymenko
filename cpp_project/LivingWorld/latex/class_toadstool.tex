@@ -1,0 +1,217 @@
+\doxysection{Toadstool Class Reference}
+\hypertarget{class_toadstool}{}\label{class_toadstool}\index{Toadstool@{Toadstool}}
+
+
+Inheritance diagram for Toadstool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_toadstool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Toadstool\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{class_toadstool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_toadstool_aa3676cd45e8d28b954f8b7f6b51d1225}\label{class_toadstool_aa3676cd45e8d28b954f8b7f6b51d1225} 
+{\bfseries Toadstool} (int power, \mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_toadstool_aed41b68b93bcee6a747a86b8ce0ff32a}\label{class_toadstool_aed41b68b93bcee6a747a86b8ce0ff32a} 
+{\bfseries Toadstool} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+void \mbox{\hyperlink{class_toadstool_aa1dab2f4876105abbb3b3ae3a9c9b3a1}{spread}} () override
+\item 
+\mbox{\hyperlink{class_toadstool}{Toadstool}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_toadstool_a171228c40e8ca033225a978a75401440}{clone}} () const override
+\item 
+std\+::string \mbox{\hyperlink{class_toadstool_a6235cefe287e0c69e485237f6d38b83d}{to\+String}} () const override
+\item 
+void \mbox{\hyperlink{class_toadstool_ae583d4249b9962ede8845e9ef61c8fb5}{collision}} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}other) override
+\item 
+\Hypertarget{class_toadstool_ac659643608a0d04fdc29bc56471bca18}\label{class_toadstool_ac659643608a0d04fdc29bc56471bca18} 
+{\bfseries Toadstool} (const \mbox{\hyperlink{class_toadstool}{Toadstool}} \&other)
+\item 
+\Hypertarget{class_toadstool_a6784a9521845c14ce8ba9056aea96fec}\label{class_toadstool_a6784a9521845c14ce8ba9056aea96fec} 
+{\bfseries Toadstool} (\mbox{\hyperlink{class_toadstool}{Toadstool}} \&\&other) noexcept
+\item 
+\Hypertarget{class_toadstool_a3a3904255e776f508d7ed0bec1168efb}\label{class_toadstool_a3a3904255e776f508d7ed0bec1168efb} 
+\mbox{\hyperlink{class_toadstool}{Toadstool}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_toadstool}{Toadstool}} \&other)
+\item 
+\Hypertarget{class_toadstool_a6ebb09998f43ae557639f8688186fc31}\label{class_toadstool_a6ebb09998f43ae557639f8688186fc31} 
+\mbox{\hyperlink{class_toadstool}{Toadstool}} \& {\bfseries operator=} (\mbox{\hyperlink{class_toadstool}{Toadstool}} \&\&other) noexcept
+\item 
+\Hypertarget{class_toadstool_a62b67e7a5f87975917de9c35c7ba0c38}\label{class_toadstool_a62b67e7a5f87975917de9c35c7ba0c38} 
+void {\bfseries initialize\+Attributes} ()
+\item 
+void \mbox{\hyperlink{class_toadstool_ad08eaae9500dca02ea718ab562b83273}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_plant}{Plant}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Plant} (int power, \mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual void \mbox{\hyperlink{class_plant_a6f8479d6ff0f6f6c997151c9c32a933d}{move}} (int dx, int dy) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Organism} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, int initiative, int live\+Length, int power\+To\+Reproduce, char sign, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual int {\bfseries get\+Power} () const
+\item 
+virtual void {\bfseries set\+Power} (int power)
+\item 
+virtual \mbox{\hyperlink{class_position}{Position}} {\bfseries get\+Position} () const
+\item 
+virtual void {\bfseries set\+Position} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+virtual std\+::string {\bfseries get\+Species} () const
+\item 
+virtual void {\bfseries set\+Species} (const std\+::string \&spec)
+\item 
+virtual int {\bfseries get\+Initiative} () const
+\item 
+virtual void {\bfseries set\+Initiative} (int initiative)
+\item 
+virtual int {\bfseries get\+Live\+Length} () const
+\item 
+virtual void {\bfseries set\+Live\+Length} (int live\+Length)
+\item 
+virtual int {\bfseries get\+Power\+To\+Reproduce} () const
+\item 
+virtual void {\bfseries set\+Power\+To\+Reproduce} (int power\+To\+Reproduce)
+\item 
+virtual char {\bfseries get\+Sign} () const
+\item 
+virtual void {\bfseries set\+Sign} (char sign)
+\item 
+virtual \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries get\+World} () const
+\item 
+virtual void {\bfseries set\+World} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual bool {\bfseries is\+Alive} () const
+\item 
+virtual void {\bfseries increase\+Power} ()
+\item 
+virtual void {\bfseries decrease\+Life} ()
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+{\bfseries Organism} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+{\bfseries Organism} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+virtual void {\bfseries set\+Ancestors\+History} (const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \&history)
+\item 
+virtual int {\bfseries get\+Birth\+Turn} () const
+\item 
+virtual void {\bfseries set\+Birth\+Turn} (int turn)
+\item 
+virtual void {\bfseries add\+Ancestor} (int birth\+Turn, int death\+Turn)
+\item 
+virtual void {\bfseries set\+Death\+Turn} (int death\+Turn)
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \& {\bfseries get\+Ancestors\+History} () const
+\item 
+virtual int {\bfseries get\+Death\+Turn} () const
+\item 
+virtual void {\bfseries update\+Ancestor\+Death\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries power}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries position}
+\item 
+std\+::string {\bfseries species}
+\item 
+int {\bfseries initiative}
+\item 
+int {\bfseries live\+Length}
+\item 
+int {\bfseries power\+To\+Reproduce}
+\item 
+int {\bfseries initial\+Power\+To\+Reproduce}
+\item 
+char {\bfseries sign}
+\item 
+\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries world}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ {\bfseries ancestors\+History}
+\item 
+int {\bfseries birth\+Turn}
+\item 
+int {\bfseries death\+Turn}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries last\+Position}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_toadstool_a171228c40e8ca033225a978a75401440}\index{Toadstool@{Toadstool}!clone@{clone}}
+\index{clone@{clone}!Toadstool@{Toadstool}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_toadstool_a171228c40e8ca033225a978a75401440} 
+\mbox{\hyperlink{class_toadstool}{Toadstool}} \texorpdfstring{$\ast$}{*} Toadstool\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_toadstool_ae583d4249b9962ede8845e9ef61c8fb5}\index{Toadstool@{Toadstool}!collision@{collision}}
+\index{collision@{collision}!Toadstool@{Toadstool}}
+\doxysubsubsection{\texorpdfstring{collision()}{collision()}}
+{\footnotesize\ttfamily \label{class_toadstool_ae583d4249b9962ede8845e9ef61c8fb5} 
+void Toadstool\+::collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_toadstool_ad08eaae9500dca02ea718ab562b83273}\index{Toadstool@{Toadstool}!draw@{draw}}
+\index{draw@{draw}!Toadstool@{Toadstool}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_toadstool_ad08eaae9500dca02ea718ab562b83273} 
+void Toadstool\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_toadstool_aa1dab2f4876105abbb3b3ae3a9c9b3a1}\index{Toadstool@{Toadstool}!spread@{spread}}
+\index{spread@{spread}!Toadstool@{Toadstool}}
+\doxysubsubsection{\texorpdfstring{spread()}{spread()}}
+{\footnotesize\ttfamily \label{class_toadstool_aa1dab2f4876105abbb3b3ae3a9c9b3a1} 
+void Toadstool\+::spread (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+\Hypertarget{class_toadstool_a6235cefe287e0c69e485237f6d38b83d}\index{Toadstool@{Toadstool}!toString@{toString}}
+\index{toString@{toString}!Toadstool@{Toadstool}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_toadstool_a6235cefe287e0c69e485237f6d38b83d} 
+std\+::string Toadstool\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_plant}{Plant}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Toadstool.\+h\item 
+Toadstool.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+\doxysection{Dandelion.\+h}
+\hypertarget{_dandelion_8h_source}{}\label{_dandelion_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Plant.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }Dandelion\ :\ \textcolor{keyword}{public}\ Plant\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00006\ \ \ \ \ Dandelion(\textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{class_position}{Position}}\ position,\ \mbox{\hyperlink{class_world}{World}}*\ world);}
+\DoxyCodeLine{00007\ \ \ \ \ Dandelion(\textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{class_position}{Position}}\ position,\ std::string\ species,\ \mbox{\hyperlink{class_world}{World}}*\ world);\ }
+\DoxyCodeLine{00008\ \ \ \ \ Dandelion();}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ spread()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00011\ \ \ \ \ Dandelion*\ clone()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ toString()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ collision(Organism*\ other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rule\ of\ Five}}
+\DoxyCodeLine{00015\ \ \ \ \ Dandelion(\textcolor{keyword}{const}\ Dandelion\&\ other);}
+\DoxyCodeLine{00016\ \ \ \ \ Dandelion(Dandelion\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00017\ \ \ \ \ Dandelion\&\ operator=(\textcolor{keyword}{const}\ Dandelion\&\ other);}
+\DoxyCodeLine{00018\ \ \ \ \ Dandelion\&\ operator=(Dandelion\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00019\ \ \ \ \ \string~Dandelion();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ draw(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeAttributes();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \};}
+
+\end{DoxyCode}

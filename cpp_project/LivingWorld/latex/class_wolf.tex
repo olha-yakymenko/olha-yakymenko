@@ -1,0 +1,258 @@
+\doxysection{Wolf Class Reference}
+\hypertarget{class_wolf}{}\label{class_wolf}\index{Wolf@{Wolf}}
+
+
+Inheritance diagram for Wolf\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{class_wolf__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Wolf\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_wolf__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_wolf_a59deec3ad62e21a4f41fbea0d3ee15c8}\label{class_wolf_a59deec3ad62e21a4f41fbea0d3ee15c8} 
+{\bfseries Wolf} (\mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_wolf_a9733459b3eefd9fb58a7294f54dcfa44}\label{class_wolf_a9733459b3eefd9fb58a7294f54dcfa44} 
+{\bfseries Wolf} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+\Hypertarget{class_wolf_adc4e3362261384438b1bb47d8332025c}\label{class_wolf_adc4e3362261384438b1bb47d8332025c} 
+{\bfseries Wolf} (const \mbox{\hyperlink{class_wolf}{Wolf}} \&other)
+\item 
+\Hypertarget{class_wolf_a0a52e3e3916071ccdcf86e6de21e07bb}\label{class_wolf_a0a52e3e3916071ccdcf86e6de21e07bb} 
+{\bfseries Wolf} (\mbox{\hyperlink{class_wolf}{Wolf}} \&\&other) noexcept
+\item 
+\Hypertarget{class_wolf_a2ada6d5ecb4a93981ed1ec6d9872d6e9}\label{class_wolf_a2ada6d5ecb4a93981ed1ec6d9872d6e9} 
+\mbox{\hyperlink{class_wolf}{Wolf}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_wolf}{Wolf}} \&other)
+\item 
+\Hypertarget{class_wolf_a877da4fa88561d1d82bc901a1869bd89}\label{class_wolf_a877da4fa88561d1d82bc901a1869bd89} 
+\mbox{\hyperlink{class_wolf}{Wolf}} \& {\bfseries operator=} (\mbox{\hyperlink{class_wolf}{Wolf}} \&\&other) noexcept
+\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_wolf_a83d3ea3d2421f3c704554bf1909375cc}{get\+Position}} () const override
+\item 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_wolf_a8be30492769fb2389bec57ccd4ef8dc7}{clone}} () const override
+\item 
+std\+::string \mbox{\hyperlink{class_wolf_a261877a87b735a5f5fa8443df5c2bdb5}{to\+String}} () const override
+\item 
+void \mbox{\hyperlink{class_wolf_a801ad00e8859611148a3908706cf043c}{move}} (int dx, int dy) override
+\item 
+void \mbox{\hyperlink{class_wolf_aa8dff63450a728f694dcf89570f471ac}{collision}} (\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}other) override
+\item 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_wolf_a82478f1a4823fda154317f95a1c2aa7f}{create\+Offspring}} (\mbox{\hyperlink{class_position}{Position}} pos) override
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_wolf_a9aab1bd3131803a5b96bdc85b8fc0cf9}{find\+Best\+Move}} () override
+\item 
+\Hypertarget{class_wolf_a091d6eec300bfd0ee816d2cb9450d476}\label{class_wolf_a091d6eec300bfd0ee816d2cb9450d476} 
+void {\bfseries initialize\+Attributes} ()
+\item 
+void \mbox{\hyperlink{class_wolf_a0b9e94c3d5ed244384ffcbb6d09996a8}{draw}} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Animal} (int power, \mbox{\hyperlink{class_position}{Position}} position, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual void \mbox{\hyperlink{class_animal_ade2c9c36b886c625d620b32ab85ff3f3}{spread}} () override
+\item 
+virtual void {\bfseries reproduce} (\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*}partner)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Organism} (int power, \mbox{\hyperlink{class_position}{Position}} position, std\+::string species, int initiative, int live\+Length, int power\+To\+Reproduce, char sign, \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual int {\bfseries get\+Power} () const
+\item 
+virtual void {\bfseries set\+Power} (int power)
+\item 
+virtual void {\bfseries set\+Position} (\mbox{\hyperlink{class_position}{Position}} position)
+\item 
+virtual std\+::string {\bfseries get\+Species} () const
+\item 
+virtual void {\bfseries set\+Species} (const std\+::string \&spec)
+\item 
+virtual int {\bfseries get\+Initiative} () const
+\item 
+virtual void {\bfseries set\+Initiative} (int initiative)
+\item 
+virtual int {\bfseries get\+Live\+Length} () const
+\item 
+virtual void {\bfseries set\+Live\+Length} (int live\+Length)
+\item 
+virtual int {\bfseries get\+Power\+To\+Reproduce} () const
+\item 
+virtual void {\bfseries set\+Power\+To\+Reproduce} (int power\+To\+Reproduce)
+\item 
+virtual char {\bfseries get\+Sign} () const
+\item 
+virtual void {\bfseries set\+Sign} (char sign)
+\item 
+virtual \mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries get\+World} () const
+\item 
+virtual void {\bfseries set\+World} (\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*}world)
+\item 
+virtual bool {\bfseries is\+Alive} () const
+\item 
+virtual void {\bfseries increase\+Power} ()
+\item 
+virtual void {\bfseries decrease\+Life} ()
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+\mbox{\hyperlink{class_organism}{Organism}} \& {\bfseries operator=} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+{\bfseries Organism} (const \mbox{\hyperlink{class_organism}{Organism}} \&other)
+\item 
+{\bfseries Organism} (\mbox{\hyperlink{class_organism}{Organism}} \&\&other) noexcept
+\item 
+virtual void {\bfseries set\+Ancestors\+History} (const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \&history)
+\item 
+virtual int {\bfseries get\+Birth\+Turn} () const
+\item 
+virtual void {\bfseries set\+Birth\+Turn} (int turn)
+\item 
+virtual void {\bfseries add\+Ancestor} (int birth\+Turn, int death\+Turn)
+\item 
+virtual void {\bfseries set\+Death\+Turn} (int death\+Turn)
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ \& {\bfseries get\+Ancestors\+History} () const
+\item 
+virtual int {\bfseries get\+Death\+Turn} () const
+\item 
+virtual void {\bfseries update\+Ancestor\+Death\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_animal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries previous\+Position}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_organism}{Organism}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries power}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries position}
+\item 
+std\+::string {\bfseries species}
+\item 
+int {\bfseries initiative}
+\item 
+int {\bfseries live\+Length}
+\item 
+int {\bfseries power\+To\+Reproduce}
+\item 
+int {\bfseries initial\+Power\+To\+Reproduce}
+\item 
+char {\bfseries sign}
+\item 
+\mbox{\hyperlink{class_world}{World}} \texorpdfstring{$\ast$}{*} {\bfseries world}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_ancestor}{Ancestor}} $>$ {\bfseries ancestors\+History}
+\item 
+int {\bfseries birth\+Turn}
+\item 
+int {\bfseries death\+Turn}
+\item 
+\mbox{\hyperlink{class_position}{Position}} {\bfseries last\+Position}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_wolf_a8be30492769fb2389bec57ccd4ef8dc7}\index{Wolf@{Wolf}!clone@{clone}}
+\index{clone@{clone}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{class_wolf_a8be30492769fb2389bec57ccd4ef8dc7} 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} Wolf\+::clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_wolf_aa8dff63450a728f694dcf89570f471ac}\index{Wolf@{Wolf}!collision@{collision}}
+\index{collision@{collision}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{collision()}{collision()}}
+{\footnotesize\ttfamily \label{class_wolf_aa8dff63450a728f694dcf89570f471ac} 
+void Wolf\+::collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_organism}{Organism}} \texorpdfstring{$\ast$}{*}}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_wolf_a82478f1a4823fda154317f95a1c2aa7f}\index{Wolf@{Wolf}!createOffspring@{createOffspring}}
+\index{createOffspring@{createOffspring}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{createOffspring()}{createOffspring()}}
+{\footnotesize\ttfamily \label{class_wolf_a82478f1a4823fda154317f95a1c2aa7f} 
+\mbox{\hyperlink{class_animal}{Animal}} \texorpdfstring{$\ast$}{*} Wolf\+::create\+Offspring (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_position}{Position}}}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_wolf_a0b9e94c3d5ed244384ffcbb6d09996a8}\index{Wolf@{Wolf}!draw@{draw}}
+\index{draw@{draw}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_wolf_a0b9e94c3d5ed244384ffcbb6d09996a8} 
+void Wolf\+::draw (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_wolf_a9aab1bd3131803a5b96bdc85b8fc0cf9}\index{Wolf@{Wolf}!findBestMove@{findBestMove}}
+\index{findBestMove@{findBestMove}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{findBestMove()}{findBestMove()}}
+{\footnotesize\ttfamily \label{class_wolf_a9aab1bd3131803a5b96bdc85b8fc0cf9} 
+std\+::pair$<$ int, int $>$ Wolf\+::find\+Best\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_wolf_a83d3ea3d2421f3c704554bf1909375cc}\index{Wolf@{Wolf}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \label{class_wolf_a83d3ea3d2421f3c704554bf1909375cc} 
+\mbox{\hyperlink{class_position}{Position}} Wolf\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_organism}{Organism}}.
+
+\Hypertarget{class_wolf_a801ad00e8859611148a3908706cf043c}\index{Wolf@{Wolf}!move@{move}}
+\index{move@{move}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_wolf_a801ad00e8859611148a3908706cf043c} 
+void Wolf\+::move (\begin{DoxyParamCaption}\item[{int}]{dx}{, }\item[{int}]{dy}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_animal}{Animal}}.
+
+\Hypertarget{class_wolf_a261877a87b735a5f5fa8443df5c2bdb5}\index{Wolf@{Wolf}!toString@{toString}}
+\index{toString@{toString}!Wolf@{Wolf}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily \label{class_wolf_a261877a87b735a5f5fa8443df5c2bdb5} 
+std\+::string Wolf\+::to\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_animal}{Animal}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Wolf.\+h\item 
+Wolf.\+cpp\end{DoxyCompactItemize}

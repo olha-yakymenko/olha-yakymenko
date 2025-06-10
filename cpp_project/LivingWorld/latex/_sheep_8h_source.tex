@@ -1,0 +1,39 @@
+\doxysection{Sheep.\+h}
+\hypertarget{_sheep_8h_source}{}\label{_sheep_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Animal.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }Sheep\ :\ \textcolor{keyword}{public}\ Animal\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00008\ \ \ \ \ Sheep(\mbox{\hyperlink{class_position}{Position}}\ position,\ \mbox{\hyperlink{class_world}{World}}*\ world);}
+\DoxyCodeLine{00009\ \ \ \ \ Sheep(\textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{class_position}{Position}}\ position,\ std::string\ species,\ \mbox{\hyperlink{class_world}{World}}*\ world);\ \textcolor{comment}{//\ DODANE}}
+\DoxyCodeLine{00010\ \ \ \ \ Sheep();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ getPosition()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ position;\ \ \textcolor{comment}{//\ Jeśli\ nie\ zmieniasz\ logiki,\ wystarczy\ przekazać\ to\ samo}}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ Animal*\ clone()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ toString()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ move(\textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ collision(Organism*\ other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ Animal*\ createOffspring(\mbox{\hyperlink{class_position}{Position}}\ pos)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ std::pair<int,\ int>\ findBestMove()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ void\ reproduce(Animal*\ partner)\ override;}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \string~Sheep();}
+\DoxyCodeLine{00025\ \ \ \ \ Sheep(\textcolor{keyword}{const}\ Sheep\&\ other);}
+\DoxyCodeLine{00026\ \ \ \ \ Sheep(Sheep\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00027\ \ \ \ \ Sheep\&\ operator=(\textcolor{keyword}{const}\ Sheep\&\ other);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ operator\ przypisania\ kopiujący}}
+\DoxyCodeLine{00028\ \ \ \ \ Sheep\&\ operator=(Sheep\&\&\ other)\ \textcolor{keyword}{noexcept};\ \ \ \ \textcolor{comment}{//\ operator\ przypisania\ przenoszący}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ draw(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeAttributes();}
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

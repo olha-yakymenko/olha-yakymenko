@@ -1,0 +1,42 @@
+\doxysection{Wolf.\+h}
+\hypertarget{_wolf_8h_source}{}\label{_wolf_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Animal.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{class\ }Wolf\ :\ \textcolor{keyword}{public}\ Animal\ \{}
+\DoxyCodeLine{00005\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00006\ \ \ \ \ Wolf(\mbox{\hyperlink{class_position}{Position}}\ position,\ \mbox{\hyperlink{class_world}{World}}*\ world);}
+\DoxyCodeLine{00007\ \ \ \ \ Wolf(\textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{class_position}{Position}}\ position,\ std::string\ species,\ \mbox{\hyperlink{class_world}{World}}*\ world);\ \textcolor{comment}{//\ DODANE}}
+\DoxyCodeLine{00008\ \ \ \ \ Wolf();}
+\DoxyCodeLine{00009\ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Konstruktor\ kopiujący}}
+\DoxyCodeLine{00011\ \ \ \ \ Wolf(\textcolor{keyword}{const}\ Wolf\&\ other);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ Konstruktor\ przenoszący}}
+\DoxyCodeLine{00014\ \ \ \ \ Wolf(Wolf\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Operator\ przypisania\ kopiującego}}
+\DoxyCodeLine{00017\ \ \ \ \ Wolf\&\ operator=(\textcolor{keyword}{const}\ Wolf\&\ other);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Operator\ przypisania\ przenoszącego}}
+\DoxyCodeLine{00020\ \ \ \ \ Wolf\&\ operator=(Wolf\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_position}{Position}}\ getPosition()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ position;\ \ \textcolor{comment}{//\ Jeśli\ nie\ zmieniasz\ logiki,\ wystarczy\ przekazać\ to\ samo}}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ Animal*\ clone()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ toString()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ move(\textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ collision(Organism*\ other)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ Animal*\ createOffspring(\mbox{\hyperlink{class_position}{Position}}\ pos)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ std::pair<int,\ int>\ findBestMove()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ void\ reproduce(Animal*\ partner)\ override;}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeAttributes();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ draw(SDL\_Renderer*\ renderer)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}
