@@ -1,0 +1,19 @@
+# Etap bazowy
+FROM node:20-alpine
+
+# Ustawienie katalogu roboczego
+WORKDIR /app
+
+RUN apk update && apk add curl
+
+# Kopiuj pliki
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Ustaw zmienne środowiskowe
+ENV NODE_ENV=production
+
+# Uruchom serwer
+CMD ["npm", "start"]

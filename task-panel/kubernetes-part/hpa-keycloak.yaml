@@ -1,0 +1,40 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: keycloak
+  namespace: tasks
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: keycloak  
+  minReplicas: 2  # Minimalna liczba replik (Keycloak potrzebuje wysokiej dostępności)
+  maxReplicas: 5  # Maksymalna liczba replik
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 60  # Skalowanie przy 60% użycia CPU
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 75  # Skalowanie przy 75% użycia pamięci
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 90  # Stabilizacja po skalowaniu w górę
+      selectPolicy: Max
+      policies:
+        - type: Percent
+          value: 50  # Wzrost o maks. 50% liczby replik w ciągu 90 sekund
+          periodSeconds: 90
+    scaleDown:
+      stabilizationWindowSeconds: 120  # Stabilizacja po skalowaniu w dół
+      selectPolicy: Min
+      policies:
+        - type: Pods
+          value: 1  # Zmniejszenie liczby replik maksymalnie o 1 pod na 120 sekund
+          periodSeconds: 120

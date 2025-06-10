@@ -1,0 +1,21 @@
+apiVersion: v1
+data:
+  ex-backend-config.env: |
+    PGUSER=admin
+    PGHOST=postgres
+    PGDATABASE=tasks
+    PGPORT=5432
+    keycloak_url = "http://keycloak:8080"
+    realm = "task-realm"
+    client_id = "backend"
+    client_secret = "**********"
+
+    admin_username=admin
+    admin_password=admin
+kind: ConfigMap
+metadata:
+  namespace: tasks   
+  creationTimestamp: null
+  labels:
+    io.kompose.service: express-backend
+  name: express-backend-config

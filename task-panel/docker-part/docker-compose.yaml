@@ -1,0 +1,199 @@
+
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16-alpine  
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD_FILE=/run/secrets/pg-password
+      - POSTGRES_DB=tasks
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - db_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "admin", "-d", "tasks"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+      start_period: 30s
+    secrets:
+      - pg-password
+
+
+
+  backend:
+    image: olhaya/backend:multiarch1 
+    build:
+      context: ./backend/python
+      dockerfile: Dockerfile.backend
+      x-buildx: 
+        platforms: linux/amd64,linux/arm64
+        cache-from: type=registry,ref=olhaya/backend:cache
+        cache-to: type=registry,ref=olhaya/backend:cache,mode=max
+        tags: olhaya/backend:multiarch1
+        push: true
+    depends_on:
+      - postgres
+    environment:
+      - PUBLIC_KEY_FILE=/run/secrets/jwt-private-key
+      - PGPASSWORD_FILE=/run/secrets/pg-password
+      - PGPORT
+      - PGUSER
+      - PGHOST
+      - PGDATABASE
+    ports:
+      - "3001:3001"
+    networks:
+      - db_network
+      - frontend_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+      start_period: 30s
+    secrets:
+      - pg-password
+      - jwt-private-key
+    configs:
+      - source: backend-config
+        target: /config/backend-config.env
+
+
+  express-backend:
+    image: olhaya/express-backend:multiarch
+    build:
+      context: ./backend/express
+      dockerfile: Dockerfile.express
+      x-buildx:
+        platforms: linux/amd64,linux/arm64
+        cache-from: type=registry,ref=olhaya/express-backend:cache
+        cache-to: type=registry,ref=olhaya/express-backend:cache,mode=max
+        tags: olhaya/express-backend:multiarch
+        push: true
+    depends_on:
+      - postgres
+    environment:
+      - PUBLIC_KEY_FILE=/run/secrets/jwt-private-key
+      - PGPASSWORD_FILE=/run/secrets/pg-password
+    ports:
+      - "3002:3002"
+    networks:
+      - db_network
+      - frontend_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3002/health"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+      start_period: 30s
+    secrets:
+      - pg-password
+      - jwt-private-key
+    configs:
+      - source: express-backend-config
+        target: /config/ex-backend-config.env
+
+  keycloak:
+    image: olhaya/keycloak:multiarch1
+    build:
+      context: ./keycloak
+      dockerfile: Dockerfile.keycloak
+      x-buildx:
+        platforms: linux/amd64,linux/arm64
+        cache-from: type=registry,ref=olhaya/keycloak:cache
+        cache-to: type=registry,ref=olhaya/keycloak:cache,mode=max
+        tags: olhaya/keycloak:multiarch1
+        push: true
+    environment:
+      - KC_ADMIN=admin
+      - KC_ADMIN_PASSWORD=admin
+      # - KC_ADMIN_PASSWORD_FILE=/run/secrets/kc-admin-password
+      - KC_DB=postgres
+      - KC_DB_URL=jdbc:postgresql://postgres:5432/tasks
+      - KC_DB_USERNAME=admin
+      - KC_DB_PASSWORD=password
+      # - KC_DB_PASSWORD_FILE=/run/secrets/pg-password
+      - KC_HOSTNAME=localhost
+      - KC_HTTP_ENABLED=true
+      - KC_BOOTSTRAP_ADMIN_USERNAME=admin
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=admin
+
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - db_network
+      - frontend_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "/opt/keycloak/bin/kc.sh", "show-config"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+      start_period: 30s
+    volumes:
+      - keycloak-data:/opt/keycloak/data
+    command: ["start", "--import-realm"]
+
+
+  frontend:
+    image: olhaya/frontend:multiarch  
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+      x-buildx: 
+        platforms: linux/amd64,linux/arm64
+        cache-from: type=registry,ref=olhaya/frontend:cache
+        cache-to: type=registry,ref=olhaya/frontend:cache,mode=max
+        tags: olhaya/frontend:multiarch
+        push: true
+    depends_on:
+      - backend
+      - keycloak
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend_network
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+      start_period: 30s
+
+
+volumes:
+  postgres-data:
+    driver: local
+  keycloak-data:
+    driver: local
+
+networks:
+  db_network:
+    driver: bridge
+  frontend_network:
+    driver: bridge
+
+secrets:
+  pg-password:
+    file: ./secrets/pg-password.txt
+  kc-admin-password:
+    file: ./secrets/kc-admin-password.txt
+  jwt-private-key:
+    file: ./secrets/jwt-private-key.pem
+
+
+configs:
+  backend-config:
+    file: ./configs/backend-config.env
+  express-backend-config:
+    file: ./configs/ex-backend-config.env
+

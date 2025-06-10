@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: tasks   
+  annotations:
+    kompose.cmd: ./kompose convert -o ../kubernetes-part
+    kompose.version: 1.31.2 (a92241f79)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: backend
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      io.kompose.service: backend
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: ./kompose convert -o ../kubernetes-part
+        kompose.version: 1.31.2 (a92241f79)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/docker-part-db-network: "true"
+        io.kompose.network/docker-part-frontend-network: "true"
+        io.kompose.service: backend
+    spec:
+      containers:
+        - env:
+            - name: PGPASSWORD_FILE
+              value: /run/secrets/pg-password/pg-password
+            - name: PUBLIC_KEY_FILE
+              value: /run/secrets/jwt-private-key/jwt-private-key
+          image: olhaya/backend:multiarch1
+          livenessProbe:
+            exec:
+              command:
+                - curl
+                - -f
+                - http://localhost:3001/health
+            failureThreshold: 5
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+          name: backend
+          ports:
+            - containerPort: 3001
+              # hostPort: 3001
+              protocol: TCP
+          resources:
+            requests:
+              cpu: "100m"       # 100 miliCPU (0.1 CPU)
+              memory: "200Mi"    # 200 MiB pamięci
+            limits:
+              cpu: "500m"       # 500 miliCPU (0.5 CPU)
+              memory: "1Gi"
+          volumeMounts:
+            - mountPath: /config/backend-config.env
+              name: backend-config
+              subPath: backend-config.env
+            - mountPath: /run/secrets/pg-password
+              name: pg-password
+            - mountPath: /run/secrets/jwt-private-key
+              name: jwt-private-key
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            items:
+              - key: backend-config.env
+                path: backend-config.env
+            name: backend-config
+          name: backend-config
+        - name: pg-password
+          secret:
+            items:
+              - key: pg-password
+                path: pg-password
+            secretName: pg-password
+        - name: jwt-private-key
+          secret:
+            items:
+              - key: jwt-private-key
+                path: jwt-private-key
+            secretName: jwt-private-key
