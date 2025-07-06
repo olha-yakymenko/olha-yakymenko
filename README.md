@@ -28,11 +28,33 @@ TensorFlow · PyTorch · scikit-learn · Keras
 ### 📊 Data Visualization  
 Matplotlib · Seaborn · Plotly
 
+---
 
+## 💼 My Projects
 
-MY PROJECTS:
-[Banking App](https://github.com/olha-yakymenko/bank-app.git) built with Python and unittest.
-[Living World](https://github.com/olha-yakymenko/Living_World_project.git) built with C++.
-[InstagramApp](https://github.com/olha-yakymenko/instagram_project.git) is a React and PostgreSQL-based social media app featuring real-time chat via WebSocket and MQTT, enabling users to post, like, comment, and moderate content seamlessly.
-[Online shop](https://github.com/olha-yakymenko/online_shop.git) A modern clothing store app built with React and Express/PostgreSQL, featuring categorized product browsing (Women, Men, Kids), advanced search and filtering, secure user accounts, shopping cart, order management, and an admin panel for inventory and order control.
-[Task Panel](https://github.com/olha-yakymenko/technologie_chmurowe_projekt.git) In the system, tasks are created and assigned by administrators, while regular users can only access tasks assigned to them — they can view, update the status, and mark them as completed.
+### 🔐 [Task Panel](https://github.com/olha-yakymenko/technologie_chmurowe_projekt.git)  
+A secure task management system with **role-based access control** using **Keycloak**.  
+Admins create and assign tasks, while users can only view and update tasks assigned to them.
+
+---
+
+### 🛍️ [Online Shop](https://github.com/olha-yakymenko/online_shop.git)  
+A modern clothing store app built with **React** and **Express/PostgreSQL**.  
+Features include product categories (Women, Men, Kids), advanced search/filtering, secure user accounts, shopping cart, order tracking, and an admin panel.
+
+---
+
+### 📸 [InstagramApp](https://github.com/olha-yakymenko/instagram_project.git)  
+A social media app built with **React** and **PostgreSQL**, featuring real-time chat via **WebSocket** and **MQTT**.  
+Users can post, like, comment, and moderate content seamlessly.
+
+---
+
+### 🌍 [Living World](https://github.com/olha-yakymenko/Living_World_project.git)  
+An object-oriented simulation of a living ecosystem built with **C++**.
+
+---
+
+### 💳 [Banking App](https://github.com/olha-yakymenko/bank-app.git)  
+A command-line banking application developed in **Python**, tested with **unittest**.  
+Supports user accounts, deposits, withdrawals, and transaction tracking.
