@@ -10,7 +10,7 @@ public:
     // Metody wirtualne
     virtual void move(int dx, int dy) override;
     virtual void spread() override;
-    vi rtual std::string toString() const override;
+    virtual std::string toString() const override;
     virtual void collision(Organism* other) override = 0;
     virtual Animal* createOffspring(Position pos) = 0;
     virtual Animal* clone() const = 0;

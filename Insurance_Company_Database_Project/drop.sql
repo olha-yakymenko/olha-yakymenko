@@ -1,0 +1,13 @@
+DROP TABLE Uslugi;
+DROP TABLE Rabat;
+DROP TABLE Wyplata;
+DROP TABLE Zdarzenie;
+DROP TABLE Rodzaj_ubezpieczenia;
+DROP TABLE Polis;
+DROP TABLe Agent;
+DROP TABLE Przedmiot_ubezpieczenia;
+DROP TABLE Osrodek_ubezpieczeniowy;
+DROP TABLE Kontakt;
+DROP TABLE Klient;
+DROP TABLE Adres;
+DROP TABLE Wycena;

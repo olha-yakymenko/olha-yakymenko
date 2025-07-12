@@ -1,2 +1,0 @@
-imie: Olha
-nazwisko: Yakymenko
