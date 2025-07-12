@@ -32,9 +32,16 @@ Matplotlib · Seaborn · Plotly
 
 ## 💼 My Projects
 
-### 🔐 [Task Panel](https://github.com/olha-yakymenko/technologie_chmurowe_projekt.git)  
-A secure task management system with **role-based access control** using **Keycloak**.  
-Admins create and assign tasks, while users can only view and update tasks assigned to them.
+### 🧠 [AI Heart Check](https://github.com/olha-yakymenko/AI_Heart_Check_project.git)
+AI Heart Check is an intelligent decision support system for predicting cardiovascular disease using machine learning and real patient data.
+
+---
+
+### 🔐 [Task Panel](https://github.com/olha-yakymenko/Task_Management_Application.git)  
+This project is a secure task management system implementing **role-based access control** using **Keycloak**.  
+Admins have the ability to create and assign tasks, while users can only view and update tasks assigned to them.  
+
+The application is containerized with **Docker** and deployed using **Kubernetes** for scalable and reliable management.
 
 ---
 
@@ -58,3 +65,9 @@ An object-oriented simulation of a living ecosystem built with **C++**.
 ### 💳 [Banking App](https://github.com/olha-yakymenko/bank-app.git)  
 A command-line banking application developed in **Python**, tested with **unittest**.  
 Supports user accounts, deposits, withdrawals, and transaction tracking.
+
+---
+
+### 🏢📊 [Insurance Company Database Project](https://github.com/olha-yakymenko/Insurance_Company_Database_Project.git)
+
+This project implements a comprehensive insurance company database using PostgreSQL. It includes views for simplified data access, functions and procedures for business logic and data manipulation, and triggers for automatic updates and data validation. Designed to support efficient management of client information, insurance policies, claims, and payments.
