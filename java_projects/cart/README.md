@@ -73,6 +73,6 @@ The project includes unit tests verifying:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/olha-yakymenko/java-projects.git
-cd cart
+git clone https://github.com/olha-yakymenko/java_projects.git
+cd java_projects/cart
 mvn clean test

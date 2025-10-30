@@ -84,6 +84,6 @@ This project includes unit tests validating:
 
 ```bash
 git clone https://github.com/olha-yakymenko/java_projects.git
-cd market
+cd java_projects/market
 mvn clean test
 

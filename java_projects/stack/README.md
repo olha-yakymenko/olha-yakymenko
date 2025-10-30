@@ -75,7 +75,7 @@ Unit tests are implemented for:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/olha-yakymenko/java-projects.git
-cd stack
+git clone https://github.com/olha-yakymenko/java_projects.git
+cd java_projects/stack
 mvn clean test
 
