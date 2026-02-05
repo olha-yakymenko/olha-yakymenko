@@ -45,6 +45,12 @@ The application is containerized with **Docker** and deployed using **Kubernetes
 
 ---
 
+### 📅 [MeetHub](https://github.com/olha-yakymenko/meethub)
+
+**Spring Boot** web application for organizing and managing meetings and events, featuring a REST API, Thymeleaf-based frontend, role-based access, and participant engagement.
+
+---
+
 ### 💹 [Market Simulation](https://github.com/olha-yakymenko/java_projects/tree/main/market)  
 A turn-based market simulation built in **Java**.  
 Models interactions between **Sellers, Buyers, and a Central Bank**, simulating pricing, inflation, and market dynamics.  
