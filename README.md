@@ -50,6 +50,10 @@ The application is containerized with **Docker** and deployed using **Kubernetes
 **Spring Boot** web application for organizing and managing meetings and events, featuring a REST API, Thymeleaf-based frontend, role-based access, and participant engagement.
 
 ---
+### 📅 [CalTrack](https://github.com/olha-yakymenko/caltrack.git)
+A modern web application built with Angular 20, designed to help users track meals and monitor daily calorie intake. 
+
+---
 
 ### 💹 [Market Simulation](https://github.com/olha-yakymenko/java_projects/tree/main/market)  
 A turn-based market simulation built in **Java**.  
