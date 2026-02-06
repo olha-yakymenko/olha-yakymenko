@@ -8,10 +8,10 @@ Welcome to my coding portfolio! I'm a student passionate about software developm
 Python · C++ · Java · JavaScript · Scala · Go · R · Scheme · Prolog
 
 ### 🌍 Web Development  
-HTML · CSS / SCSS · React · WebSocket · MQTT · TLS
+HTML · CSS / SCSS · Angular · React · WebSocket · MQTT · TLS
 
 ### 🧰 Frameworks & Libraries  
-Flask · Node.js · Express.js · Next.js · Pandas
+Flask · Node.js · Express.js · Next.js · Pandas · Spring Boot
 
 ### 🗄️ Databases & Storage  
 PostgreSQL · SQL 
@@ -50,7 +50,7 @@ The application is containerized with **Docker** and deployed using **Kubernetes
 **Spring Boot** web application for organizing and managing meetings and events, featuring a REST API, Thymeleaf-based frontend, role-based access, and participant engagement.
 
 ---
-### 📅 [CalTrack](https://github.com/olha-yakymenko/caltrack.git)
+### 🍽️ [CalTrack](https://github.com/olha-yakymenko/caltrack.git)
 A modern web application built with Angular 20, designed to help users track meals and monitor daily calorie intake. 
 
 ---
